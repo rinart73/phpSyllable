@@ -25,7 +25,8 @@
     "php": ">=5.6",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "ext-dom": "*"
+    "ext-dom": "*",
+    "ivopetkov/html5-dom-document-php": "^2.3"
   },
   "require-dev": {
     "codacy/coverage": "1.*",

@@ -449,7 +449,7 @@ class Syllable
      */
     public function hyphenateHtml($html)
     {
-        $dom = new \DOMDocument();
+        $dom = new \IvoPetkov\HTML5DOMDocument('1.0', self::$encoding);
         $dom->resolveExternals = true;
         $dom->loadHTML($html, $this->libxmlOptions);
 
@@ -471,7 +471,7 @@ class Syllable
      * @param \DOMNodeList|null $includeNodes
      * @param bool $split
      */
-    private function hyphenateHtmlDom(
+    public function hyphenateHtmlDom(
         \DOMNode $node,
         \DOMNodeList $excludeNodes = null,
         \DOMNodeList $includeNodes = null,
